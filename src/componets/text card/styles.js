@@ -17,7 +17,7 @@ const CardTitle = styled.h3`
     letter-spacing: 0;
     line-height: ${({LineHeighTitle})=>LineHeighTitle};
     font-family: 'Montserrat', sans-serif,Arial;
-    font-weight:${({FontWeight})=>FontWeight};
+    font-weight:${({FontWeightTile})=>FontWeightTile};
 `
 const TextCardP = styled.div`
     width:100%;
