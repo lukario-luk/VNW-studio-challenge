@@ -1,5 +1,6 @@
 import React from 'react';
 import TextCard from '../text card';
+import MemberSearch from '../member search'
 import VNWLogo from '../../assets/image/logo_vai_na_web.svg'
 import virtualDocumentInCircle from "../../assets/image/transparent_virtual_document_icon_in_a_circle.svg"
 import Code3D from "../../assets/image/3d_code.png"
@@ -81,7 +82,8 @@ const main =()=> {
       </S.Section>
       <S.Section
         id='Formation'
-        Padding={"228px 213px 151px 215px"}
+        Padding={"228px 213px 151px 203px"}
+        DirectionBox={"column"}
           >
         <S.SectionTitle 
           Margin={"0 0 43px 0"}
@@ -90,19 +92,13 @@ const main =()=> {
          >
           Equipe
         </S.SectionTitle>
+        <MemberSearch/>
         <div></div>
       </S.Section>
-    </main>
+      <S.Section>
 
-  {/* <FormationSection id='Formation'>
-    formação
-  </FormationSection>
-  <TeamSection id='Team'>
-    time
-  </TeamSection>
-  <EventsSection id='Events'>
-    eventos
-  </EventsSection> */}
+      </S.Section>
+    </main>
   </>
     );
 }

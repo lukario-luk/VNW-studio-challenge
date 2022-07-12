@@ -4,6 +4,7 @@ const Section = styled.section`
     width:100%;
     padding:${({Padding})=>Padding};
     display:flex;
+    flex-direction:${({DirectionBox})=>DirectionBox};
 `
 const SectionTitle = styled.h3`
     margin:${({Margin})=>Margin};

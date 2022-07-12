@@ -29,7 +29,7 @@ const TextCardP = styled.div`
     line-height: ${({LineHeighText})=>LineHeighText};
     line-clamp:100px;
     font-family: 'Montserrat', sans-serif,Arial;
-    font-weight:${({FontWeight})=>FontWeight};
+    font-weight:${({FontWeightText})=>FontWeightText};
 `
 
 export {TextCardContainer,CardTitle,ImageCard,TextCardP,Figure}

@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './styles'
 
-function TextCard({AlignImage,MarginImg,WidthImg,Image,ImgDescription,CardName, TitleSize,LineHeighTile, PSpacing, TextSize,LineHeighText,MapArrayP}){
+const TextCard=({AlignImage,MarginImg,WidthImg,Image,ImgDescription,CardName, TitleSize,LineHeighTile, PSpacing, TextSize,LineHeighText,MapArrayP})=>{
   
   return (
     <>
