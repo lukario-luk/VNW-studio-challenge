@@ -18,3 +18,8 @@ const ImgSection = styled.img`
     margin:${({Margin})=>Margin};
 `
 export {Section,SectionTitle,ImgSection}
+
+SectionTitle.defaultProps = {
+    TitleSize:"58px",
+    FontWeight:"800",
+}

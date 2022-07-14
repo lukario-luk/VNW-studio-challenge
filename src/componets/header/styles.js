@@ -34,6 +34,5 @@ const Title1 =styled.h1`
 `
 const HeaderSection = styled.section`
     padding:134px 0 0;
-    
 `
 export {HeaderContainer,VNWLogo,Title1,HeaderSection}

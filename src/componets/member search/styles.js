@@ -23,6 +23,8 @@ const SearchBar =styled.input`
     &::placeholder { 
         color: #fff;
         font-size:26px;
+        font-style:italic;
+        font-family:'Montserrat', sans-serif,Arial;
 }
 `
 const ButtonSearch =styled.button`
@@ -34,7 +36,7 @@ const ImgBtn = styled.img`
 `
 const BoxMambers =styled.ul`
     width:100%;
-    
+    min-height:1519px;
     display:flex;
     flex-wrap:wrap;
 `

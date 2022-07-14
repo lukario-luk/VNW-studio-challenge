@@ -20,6 +20,7 @@ const TextCard=({AlignImage,MarginImg,WidthImg,Image,ImgDescription,CardName, Ti
           {MapArrayP.map(item=>(
 
           <S.TextCardP 
+          key={item}
           PSpacing={PSpacing} 
           TextSize={TextSize} 
           LineHeighText={LineHeighText}

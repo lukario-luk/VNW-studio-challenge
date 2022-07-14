@@ -19,56 +19,46 @@ import Photo14 from '../../assets/image/team-member-photos/photo14.jpg'
 import Photo15 from '../../assets/image/team-member-photos/photo15.jpg'
 
 const MemberSearch=()=>{
-  const [members, setMembers]= useState([])
   const [input, setInput]= useState("")
   const ListMembers = [
-    {img:Photo1, name:"Aline Fróes", office:"#CEO",},
-    {img:Photo2, name:"Dimitri Duque", office:"#voluntários",},
-    {img:Photo3, name:"Luzia Merlim", office:"#Agente Socioemocional",},
-    {img:Photo4, name:"Paula Misan", office:"#voluntários",},
-    {img:Photo5, name:"Aline Nogueira", office:"#Agente Socioemocional",},
-    {img:Photo6, name:"Hugo Sabino", office:"#voluntários",},
-    {img:Photo7, name:"Mariana Correia", office:"#Coordenadora Administrativa",},
-    {img:Photo8, name:"Priscila Tufani", office:"#Agente de Estratégia",},
-    {img:Photo9, name:"Andrea Marinho", office:"#Psicóloga",},
-    {img:Photo10, name:"Karla De Melo", office:"#voluntários",},
-    {img:Photo11, name:"Marina Tiago", office:"#Agente Socioemocional",},
-    {img:Photo12, name:"Thais Brait", office:"#voluntários",},
-    {img:Photo13, name:"Cris Dos Prazeres", office:"#Coordenadora Executiva",},
-    {img:Photo14, name:"Karynne Moreira", office:"#Facilitadora Técnica",},
-    {img:Photo15, name:"Marlon Yuri", office:"#Instrutor Técnico",},
+    {id:1, img:Photo1, name:"Aline Fróes", office:"#CEO",},
+    {id:2, img:Photo2, name:"Dimitri Duque", office:"#voluntários",},
+    {id:3, img:Photo3, name:"Luzia Merlim", office:"#Agente Socioemocional",},
+    {id:4, img:Photo4, name:"Paula Misan", office:"#voluntários",},
+    {id:5, img:Photo5, name:"Aline Nogueira", office:"#Agente Socioemocional",},
+    {id:6, img:Photo6, name:"Hugo Sabino", office:"#voluntários",},
+    {id:7, img:Photo7, name:"Mariana Correia", office:"#Coordenadora Administrativa",},
+    {id:8, img:Photo8, name:"Priscila Tufani", office:"#Agente de Estratégia",},
+    {id:9, img:Photo9, name:"Andrea Marinho", office:"#Psicóloga",},
+    {id:10, img:Photo10, name:"Karla De Melo", office:"#voluntários",},
+    {id:11, img:Photo11, name:"Marina Tiago", office:"#Agente Socioemocional",},
+    {id:12, img:Photo12, name:"Thais Brait", office:"#voluntários",},
+    {id:13, img:Photo13, name:"Cris Dos Prazeres", office:"#Coordenadora Executiva",},
+    {id:14, img:Photo14, name:"Karynne Moreira", office:"#Facilitadora Técnica",},
+    {id:15, img:Photo15, name:"Marlon Yuri", office:"#Instrutor Técnico",},
   ] 
 
-  const SearchName = (e) => {
-      const filterMamber = ListMembers.filter(item => {
-        if(item) {
-          return true;
-        }
-      })
-  
-      console.log(input)
-      setInput(e.target.value)
-      setMembers(filterMamber)
+  const SearchMembers=()=>{
+    return ListMembers.filter(item=> item.name.toLowerCase().includes(input.toLowerCase())||item.office.toLowerCase().includes(input.toLowerCase()) ).map(item=>(
+      <MemberCard
+      key={item.id}
+      Name={item.name} 
+      Office={item.office} 
+      Img={item.img}/>
+    ))
   }
+
   return (
   <>
     <S.ContainerMS>
       <S.SearchBarBox>
-        <S.FormMembers onSubmit={e=>(
-          e.preventDefault()
-          
-          )}>
-          <S.SearchBar value={input} onChange={(e)=>SearchName(e)} type="text" placeholder="Pesquisar..." />
+        <S.FormMembers onSubmit={e=>(e.preventDefault())}>
+          <S.SearchBar value={input} onChange={(e)=>setInput(e.target.value)} type="text" placeholder="Pesquisar..." />
           <S.ButtonSearch><S.ImgBtn src={MagnifyingGlass} alt='icon magnifying glass'/></S.ButtonSearch>
         </S.FormMembers>
       </S.SearchBarBox>
       <S.BoxMambers>
-        {members.map(item=>(
-          <MemberCard
-          Name={item.name} 
-          Office={item.office} 
-          Img={item.img}/>
-        ))}
+        {SearchMembers()}
       </S.BoxMambers>
     </S.ContainerMS>
 
