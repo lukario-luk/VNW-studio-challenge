@@ -1,7 +1,5 @@
 import React from 'react';
 import * as S from './styles'
-import Photo1 from '../../assets/image/team-member-photos/photo1.jpg'
-
 const MamberCard=({Name,Office,Img})=>{
   return (
   <>
